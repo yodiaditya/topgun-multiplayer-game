@@ -2,5 +2,12 @@
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/jquery-1.6.2.min.js')  
+    - if(typeof front != 'undefined')
+      link(rel='stylesheet', href='/stylesheets/front.css')
+    - else
+      link(rel='stylesheet', href='/stylesheets/style.css')
+      script(src='/nowjs/now.js')
   body!= body
+
+

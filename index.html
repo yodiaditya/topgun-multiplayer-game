@@ -1,0 +1,24 @@
+<html>
+<head>
+<script language="Javascript">
+var map_width = 300;
+var map_height = 300;
+
+/**
+ * Simple convert Lat,Long into x,y 
+ * http://stackoverflow.com/questions/1019997/convert-lat-longs-to-x-y-co-ordinates 
+ */  
+ function convertMap(lat, lon){
+      var y = ((-1 * lat) + 90) * (map_width / 180);
+      var x = (lon + 180) * (map_height / 360);
+      var result = {x:x,y:y};
+      return result;
+  }
+
+</script>
+</head>
+<body onload="console.log(convertMap(0 ,110));console.log(convertMap(10 ,120));">
+    <!-- image found at http://www.math.ubc.ca/~israel/m103/mercator.png -->
+</body>
+</html>
+
