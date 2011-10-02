@@ -1,20 +1,30 @@
 @import "bootstrap.min.css";
 html{background-color:#000}
 body{color:#cacaca;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:normal;line-height:18px;margin:0;background-color:#000}
-.container{margin-left:auto;margin-right:auto;width:940px;padding-top:60px}
+.container{margin-left:auto;margin-right:auto;width:940px;padding-top:10px}
 .hero-unit{background-color:#000;color:#cdf5ff;margin:0;padding:0}
 .hero-unit h1{font-size:50px;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:20px}
 .row{margin-left:0}
+.clearfix{clear:both}
 .setup-map{margin-bottom:20px}
 .setup-map h2{color:#fff}
 .setup-plane{margin-top:20px}
 #planemap{margin-left:20px;clear:both}
-#mapbox-wrap{height:300px;width:300px;overflow:hidden;background:url("../images/radar.png")}
+#cockpit{margin-bottom:20px}
+#cockpit-images{background-color:#939bec;width:600px;height:270px;overflow:hidden}
+#cockpit-images img#cockpit-viewer{margin-top:-60px;margin-left:-60px}
+#cockpit-small-shots{position:absolute;margin-top:-200px;margin-left:280px;width:40px;height:40px;border:2px solid #d50003}
+#cockpit-medium-shots{position:absolute;margin-top:-240px;margin-left:240px;width:120px;height:120px;border:2px solid #d50003}
+#mapbox-wrap{height:300px;width:300px;overflow:hidden;background:url("../images/radar.png");border:4px solid #898989}
 #mapbox{width:300px;height:300px;float:left;color:#000;background:none}
-#setup-map{background:url("../images/map.png");height:320px;width:939px;margin-bottom:20px}
 #mapbox img#centerplane{margin-left:135px;margin-top:135px;position:absolute}
 #mapbox .mapplayer{position:absolute;background:url("../images/plane.png") no-repeat;width:10px;height:10px}
 .mapenemy{position:absolute;background:url("../images/enemy.png") no-repeat;width:10px;height:10px}
+#enemy-position{position:absolute;height:10px;width:600px}
+.enemy-cursor{z-index:9999;position:absolute;background:url("../images/enemy.png") no-repeat;width:100px;height:30px;color:#000;font-weight:bold;font-size:10px;padding:10px 0 0 10px}
 #frontplane img{float:left;width:590px;height:150px}
 #frontview{position:absolute;float:left}
-#ruler{float:left;position:absolute;border:1px solid #202020;width:20px;height:20px;margin-top:65px;margin-left:280px}
+.whiteplace{color:#fff;padding:10px 10px 10px 10px}
+#guide{margin-top:20px;padding:10px 10px 10px 10px;border:1px solid #dcdcdc;color:#969696}
+#enemyStatus{margin-top:20px}
+.distance-enemy{margin-top:10px;padding-top:5px;border-top:1px solid #464646}

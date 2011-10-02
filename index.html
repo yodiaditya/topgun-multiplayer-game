@@ -15,10 +15,24 @@ var map_height = 300;
       return result;
   }
 
+var getVal = new Array('5', '2', '3','7','1','9');
+var num = {};
+
+for(var ase in getVal) {
+  if(getVal[ase] > 4 ) {
+    num({}) = getVal[ase];
+  }
+}
+
+console.log(num);
+
 </script>
 </head>
 <body onload="console.log(convertMap(0 ,110));console.log(convertMap(10 ,120));">
-    <!-- image found at http://www.math.ubc.ca/~israel/m103/mercator.png -->
+<div id="wrapper">
+<div style="position:absolute;background-color:red;width:10px;height:10px;margin-top:30px;"></div>
+<div style="overflow:hidden;width:600px;height:200px;background-color:#000000;"></div>
+</div>
 </body>
 </html>
 

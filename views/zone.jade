@@ -22,25 +22,65 @@ script
     }
   }
 
+  /** Converts radians to numeric (signed) degrees */
+  if (typeof(Number.prototype.toDeg) === "undefined") {
+    Number.prototype.toDeg = function() {
+      return this * 180 / Math.PI;
+    }
+  }
+
   $(document).ready(function(){
     
     now.core.on('disconnect', function() {
       now.clientDisconnect();
     });
+
+    now.ready(function(){
+      $('#begining-game').remove(); 
+      now.startGame();
+    });
   
     $(document).bind('keydown', 'left',function (e){
       now.userMovement(-5);
+      $('#cockpit-viewer').rotate({ animateTo: -10});
       e.preventDefault();
     });
 
     $(document).bind('keydown', 'right',function (e){
       now.userMovement(5);
+      $('#cockpit-viewer').rotate({ animateTo: 10 });
+      e.preventDefault();
+    });
+    
+    $(document).bind('keyup', 'left',function (e){
+      $('#cockpit-viewer').rotate( { animateTo:0 });
       e.preventDefault();
     });
 
+    $(document).bind('keyup', 'right',function (e){
+      $('#cockpit-viewer').rotate({ animateTo:0 });
+      e.preventDefault();
+    });
+
+
+    $(document).bind('keydown', 'up',function (e){
+      now.userSpeed(1);
+      e.preventDefault();
+    });
+    
+    $(document).bind('keydown', 'down',function (e){
+      now.userSpeed(0);
+      e.preventDefault();
+    });
+    
+    now.updateUserSpeed = function(speed){
+      $('#userspeed').remove();
+      $('#speedo').append('<div id="userspeed"> <p>'+speed+' km/s</p> </div>');
+    }
+
     now.updateUserDegree = function(degree){
       $('#userdegree').remove();
-      $('#degrees').append('<div id="userdegree"> '+degree+' </div>');
+      $('#degrees').append('<div id="userdegree"> <p>'+degree+' &deg; </p></div>');
     }
     
     now.userPosition = function(player, userList) {
@@ -50,6 +90,7 @@ script
       $('div.mapenemy').remove();
       $('div.distance-enemy').remove();
       $('div.mapplayer').remove();
+      $('div.enemy-cursor').remove();
       
       var userCoordinate = convertMap(player.latitude,player.longitude);
       var userX = userCoordinate.x-241; 
@@ -59,10 +100,15 @@ script
       
       $('#mapbox').append( $('<div id="player-plane" class="mapplayer" style="margin-left:'+ userX +'px;margin-top:'+ userY+'px;"></div>'));
       $('#player-plane').rotate(player.degree);
-      
-      for(var keyVal in userList) {
-        if( player.id !== userList[keyVal]['id'] ){
 
+      var countEnemy = 0;
+
+      for(var keyVal in userList) {
+        countEnemy = keyVal;
+
+        if( player.id !== userList[keyVal]['id'] ){
+          
+          // Calculate Distance player - enemy
           var lat1 = player.latitude;
           var lat2 = userList[keyVal]['latitude'];
           var lon1 = player.longitude;
@@ -79,56 +125,156 @@ script
           var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
           var d = R * c;
 
-          var courses = computeCD(player.latitude, player.longitude, userList[keyVal].latitude, userList[keyVal].longitude);
+          // Calculate Degree from Player position with Enemy Position 
+          var plat1 = player.latitude.toRad(), plat2 = userList[keyVal].latitude.toRad();
+          var dLon = (userList[keyVal].longitude - player.longitude).toRad();
+
+          var y = Math.sin(dLon) * Math.cos(plat2);
+          var x = Math.cos(plat1)*Math.sin(plat2) -
+                  Math.sin(plat1)*Math.cos(plat2)*Math.cos(dLon);
+          var brng = Math.atan2(y, x);
+          var courses = (brng.toDeg()+360) % 360;
+
+          // Mapping Enemy Coordinate 
           var enemyCoordinate = convertMap(userList[keyVal]['latitude'],userList[keyVal]['longitude']);
           var enemyX = enemyCoordinate.x-241; 
           var enemyY = enemyCoordinate.y-133;
           enemyX = enemyX*33;
           enemyY = enemyY*17;
-          console.log(enemyX + ' , ' + enemyY);
+
+          // Cockpit View 
+          var enemyDegree = courses;
+          var enemyCockpit, eMarginTop, eMarginLeft;
+
+          //console.log(' E degree : ' + enemyDegree + ', P degree : ' + player.degree);
+    
+          coursesPlayerLeft = player.degree - 15;
+          coursesPlayerRight = player.degree + 15;
+
+          var showEnemy = 0;
+
+          if(enemyDegree > 345 || enemyDegree < 15){
+            if(coursesPlayerLeft < 0) {
+              coursesPlayerLeft = coursesPlayerLeft + 360;
+            }
+
+            if(coursesPlayerRight > 360) {
+              coursesPlayerRight = coursesPlayerRight - 360;
+            }
+            
+            if(enemyDegree < coursesPlayerRight) {
+              balanceRight = 360 - coursesPlayerLeft;
+              enemyOnCockpit = enemyDegree + balanceRight;
+
+            }else if(enemyDegree > coursesPlayerLeft){
+              enemyOnCockpit = enemyDegree - coursesPlayerLeft;
+            } 
+              
+            //console.log(' Limit : Left:' + coursesPlayerLeft + ' , Right: ' + coursesPlayerRight + ', cockpit ' + enemyOnCockpit);
+            
+            eMarginTop = 'margin-top:85px;';
+            eMarginLeft = 'margin-left: '+ enemyOnCockpit*20 +'px;';
+            
+            $('#enemy-position').append('<div id="enemy-' + keyVal + '-pos" class="enemy-cursor" style="'+ eMarginTop + eMarginLeft+'" > ' + Math.round(d) +' km </div>');
+            
+          }else{
+
+            if(enemyDegree > coursesPlayerLeft && enemyDegree < coursesPlayerRight) {
+              enemyOnCockpit = enemyDegree - coursesPlayerLeft;
+              
+              eMarginTop = 'margin-top: 85px;';
+              eMarginLeft = 'margin-left: '+ enemyOnCockpit*20 +'px;';
+              $('#enemy-position').append('<div id="enemy-' + keyVal + '-pos" class="enemy-cursor" style="'+ eMarginTop + eMarginLeft+'" >' + Math.round(d) +' km </div>');
+            } 
+          }
+          
+          //console.log('show enemy ' + showEnemy + ' L: ' + coursesPlayerLeft + ' , R: ' + coursesPlayerRight + ' ' + ' Pdegree: ' + player.degree);
+
 
           $('#mapbox').append( $('<div id="enemy-'+ keyVal+'" class="mapenemy" style="margin-left:'+ enemyX + 'px;margin-top:'+ enemyY +'px;"></div>'));
           $('#enemy-'+keyVal).rotate(userList[keyVal]['degree']);
-          
-          var getEnemy = keyVal+1;
-          $('#enemyStatus').append('<div id="distance-enemy-'+ keyVal+'" class="distance-enemy">Enemy '+ getEnemy +' : ' + d +' km');
+           
+          var getEnemy = keyVal;
+          var misillePro = d/20;
+          $('#enemyStatus').prepend(
+            '<div id="distance-enemy-' + keyVal + 
+            '" class="distance-enemy"><p>Enemy '+ getEnemy +' : ' + Math.round(d) +
+            ' km <br> ETA missile hit : ' + Math.round(misillePro) + ' seconds<br/> ' + 
+            ' </p></div>');
         };
       };
 
-      $('#statusUser').empty().append(player['latitude'] + ',' + player['longitude']);
+      if(countEnemy < 1){
+          $('#enemyStatus').append('<div id="distance-enemy" class="distance-enemy"> No enemy</div>');
+      };
+
+      $('#statusUser').empty().append('<div></div>').html("<strong> Latitude, Longitude</strong> <br>" + player['latitude'] + ',' + player['longitude']);
+
     };
 
-    now.updateMissile = function(distance){
-      $('#missile').empty().append(distance);
+    $('a.launchmisille').click(function() { 
+      now.launchMissile();
+
+      return false;
+    });
+
+    now.updateLaunch = function(status) {
+        $('#notification').append('<div class="alert-message error">' + status + '</span>');
+    };
+    
+    now.updateStatusMissile = function(status) {
+        $('#notification').prepend('<div class="alert-message error">' + status + '</span>');
     };
     
     now.updateDistance = function(player, enemies){
-      $('#distance').empty().append(player);
+      $('#distance').empty().append('<div></div>').html("Latitude &amp; longitude<br/>" + player);
     };
-   
-    $('div#mapbox').click(function(){
-      now.startGame();
-    }); 
     
   });
 
 
 .container
   .row
-    .span7#planemap
+    .span10#cockpit
+      #enemy-position
+      #cockpit-images
+        img(id="cockpit-viewer", src='/images/bg.png')
+      #cockpit-maps
+        #cockpit-small-shots
+        #cockpit-medium-shots
+        .clearfix
+ 
+  .row
+    .span6#planemap
       #mapbox-wrap      
         #mapbox
-          .clearfix
+        .clearfix
 
-    .span6
+    .span5.whiteplace
       #player
+        #begining-game
+          h2 preparing data ....
         #distance
         #degrees
-          <b>Player Degree</b>
+          <b>Plane Degree</b>
           #userdegree 
-            p 0
+            p 0 &deg;
+        #speedo
+          <b>Speed</b>
+          #userspeed 
+            p 1 km/s
         #statusUser 
 
       #enemyStatus
-  .row
+        <strong>Enemy List</strong><br/>
 
+      #missileOptions
+        a(href="#",class="launchmisille") Shots!
+
+      #notification
+        
+      #guide
+        p
+          | 1. Use Left - Right key to move.<br>
+          | 2. Up - Down key to +/- speed (1-5 km).<br>
+          | 3. Missile works if you're behind the enemy.<br>

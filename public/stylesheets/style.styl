@@ -17,7 +17,7 @@ body
     margin-left auto
     margin-right auto
     width 940px
-    padding-top 60px
+    padding-top 10px
 
 .hero-unit 
   background-color #000000
@@ -34,7 +34,10 @@ body
 
 .row 
   margin-left 0
-  
+
+.clearfix 
+  clear both
+
 .setup-map 
   margin-bottom 20px
   
@@ -48,24 +51,48 @@ body
   margin-left 20px
   clear both
 
+#cockpit
+  margin-bottom 20px 
+ 
+#cockpit-images
+  background-color #939BEC
+  width 600px
+  height 270px
+  overflow hidden
+  
+#cockpit-images img#cockpit-viewer
+  margin-top -60px
+  margin-left -60px
+
+#cockpit-small-shots
+  position absolute
+  margin-top -200px
+  margin-left 280px
+  width 40px
+  height 40px
+  border 2px solid #D50003 
+
+#cockpit-medium-shots
+  position absolute
+  margin-top -240px
+  margin-left 240px
+  width 120px
+  height 120px
+  border 2px solid #D50003 
+
 #mapbox-wrap
   height 300px
   width 300px
   overflow hidden
   background: url('../images/radar.png')
+  border 4px solid #898989
   
 #mapbox
   width 300px
   height 300px
   float left
   color #000000
-  background none 
-
-#setup-map
-  background: url('../images/map.png')
-  height 320px
-  width 939px
-  margin-bottom 20px
+  background none
 
 #mapbox img#centerplane 
   margin-left 135px
@@ -84,6 +111,22 @@ body
   width 10px
   height 10px
 
+#enemy-position
+  position absolute
+  height 10px
+  width 600px
+  
+.enemy-cursor
+  z-index 9999
+  position absolute
+  background url('../images/enemy.png') no-repeat
+  width 100px
+  height 30px
+  color #000000
+  font-weight bold
+  font-size 10px
+  padding 10px 0 0 10px
+
 #frontplane img
   float left
   width 590px
@@ -92,12 +135,21 @@ body
 #frontview
   position absolute
   float left
-  
-#ruler
-  float left
-  position absolute
-  border 1px solid #202020
-  width 20px
-  height 20px
-  margin-top 65px
-  margin-left 280px
+
+.whiteplace 
+  color #FFFFFF
+  padding 10px 10px 10px 10px
+
+#guide
+  margin-top 20px
+  padding 10px 10px 10px 10px
+  border 1px solid #DCDCDC
+  color #969696
+
+#enemyStatus
+  margin-top 20px
+
+.distance-enemy
+  margin-top 10px
+  padding-top 5px
+  border-top 1px solid #464646
