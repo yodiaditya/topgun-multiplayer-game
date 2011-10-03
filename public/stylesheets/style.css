@@ -10,7 +10,7 @@ body{color:#cacaca;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-
 .setup-map h2{color:#fff}
 .setup-plane{margin-top:20px}
 #planemap{margin-left:20px;clear:both}
-#cockpit{margin-bottom:20px}
+#cockpit{margin-bottom:20px;overflow:hidden;z-index:10000}
 #cockpit-images{background-color:#939bec;width:600px;height:270px;overflow:hidden}
 #cockpit-images img#cockpit-viewer{margin-top:-60px;margin-left:-60px}
 #cockpit-small-shots{position:absolute;margin-top:-200px;margin-left:280px;width:40px;height:40px;border:2px solid #d50003}
@@ -20,8 +20,11 @@ body{color:#cacaca;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-
 #mapbox img#centerplane{margin-left:135px;margin-top:135px;position:absolute}
 #mapbox .mapplayer{position:absolute;background:url("../images/plane.png") no-repeat;width:10px;height:10px}
 .mapenemy{position:absolute;background:url("../images/enemy.png") no-repeat;width:10px;height:10px}
+#mapbox .missile-map{position:absolute;background:url("../images/rocket.png") no-repeat;width:5px;height:5px}
 #enemy-position{position:absolute;height:10px;width:600px}
-.enemy-cursor{z-index:9999;position:absolute;background:url("../images/enemy.png") no-repeat;width:100px;height:30px;color:#000;font-weight:bold;font-size:10px;padding:10px 0 0 10px}
+.enemy-on-back{background:url("../images/plane-back.png") no-repeat}
+.enemy-on-front{background:url("../images/plane-front.png") no-repeat}
+.enemy-cursor{z-index:9999;position:absolute;width:100px;height:30px;color:#000;font-weight:bold;font-size:10px;padding:10px 0 0 10px}
 #frontplane img{float:left;width:590px;height:150px}
 #frontview{position:absolute;float:left}
 .whiteplace{color:#fff;padding:10px 10px 10px 10px}

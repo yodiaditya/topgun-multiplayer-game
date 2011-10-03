@@ -52,7 +52,9 @@ body
   clear both
 
 #cockpit
-  margin-bottom 20px 
+  margin-bottom 20px
+  overflow hidden
+  z-index 10000
  
 #cockpit-images
   background-color #939BEC
@@ -111,15 +113,26 @@ body
   width 10px
   height 10px
 
+#mapbox .missile-map
+  position absolute
+  background url('../images/rocket.png') no-repeat
+  width 5px
+  height 5px
+
 #enemy-position
   position absolute
   height 10px
   width 600px
+
+.enemy-on-back
+  background url('../images/plane-back.png') no-repeat
   
+.enemy-on-front
+  background url('../images/plane-front.png') no-repeat
+
 .enemy-cursor
   z-index 9999
   position absolute
-  background url('../images/enemy.png') no-repeat
   width 100px
   height 30px
   color #000000

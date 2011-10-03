@@ -83,11 +83,12 @@ script
       $('#degrees').append('<div id="userdegree"> <p>'+degree+' &deg; </p></div>');
     }
     
-    now.userPosition = function(player, userList) {
+    now.userPosition = function(player, userList, missileList) {
       map_width = 300;
       map_height = 300;
 
       $('div.mapenemy').remove();
+      $('div.missile-map').remove();
       $('div.distance-enemy').remove();
       $('div.mapplayer').remove();
       $('div.enemy-cursor').remove();
@@ -102,6 +103,20 @@ script
       $('#player-plane').rotate(player.degree);
 
       var countEnemy = 0;
+
+      console.log(missileList);
+      
+      // Missile on Radar
+      for(var missVal in missileList) {
+        var rCoordinate = convertMap(missileList[missVal]['rlatitude'], missileList[missVal]['rlongitude']);
+        var rX = rCoordinate.x-241; 
+        var rY = rCoordinate.y-133;
+        rX = rX*33;
+        rY = rY*17;
+        
+        $('#mapbox').append( $('<div id="missile-pos-'+ missVal +'" class="missile-map" style="margin-left:'+ rX +'px;margin-top:'+ rY+'px;"></div>'));
+      
+      }
 
       for(var keyVal in userList) {
         countEnemy = keyVal;
@@ -146,12 +161,19 @@ script
           var enemyDegree = courses;
           var enemyCockpit, eMarginTop, eMarginLeft;
 
-          //console.log(' E degree : ' + enemyDegree + ', P degree : ' + player.degree);
+          console.log(' E degree : ' + userList[keyVal]['degree'] + ', P degree : ' + player.degree + ' , Points P-E:' + enemyDegree);
     
           coursesPlayerLeft = player.degree - 15;
           coursesPlayerRight = player.degree + 15;
 
           var showEnemy = 0;
+          diffDegree = Math.min(Math.abs(userList[keyVal]['degree'] - player.degree),360-Math.abs(userList[keyVal]['degree'] - player.degree))
+
+          if(diffDegree > 90){
+            enemyHead = 'enemy-on-front';
+          }else{
+            enemyHead = 'enemy-on-back';
+          }
 
           if(enemyDegree > 345 || enemyDegree < 15){
             if(coursesPlayerLeft < 0) {
@@ -171,11 +193,11 @@ script
             } 
               
             //console.log(' Limit : Left:' + coursesPlayerLeft + ' , Right: ' + coursesPlayerRight + ', cockpit ' + enemyOnCockpit);
-            
+ 
             eMarginTop = 'margin-top:85px;';
-            eMarginLeft = 'margin-left: '+ enemyOnCockpit*20 +'px;';
+            eMarginLeft = 'margin-left: '+ enemyOnCockpit*18.5 +'px;';
             
-            $('#enemy-position').append('<div id="enemy-' + keyVal + '-pos" class="enemy-cursor" style="'+ eMarginTop + eMarginLeft+'" > ' + Math.round(d) +' km </div>');
+            $('#enemy-position').append('<div id="enemy-' + keyVal + '-pos" class="enemy-cursor '+ enemyHead +'" style="'+ eMarginTop + eMarginLeft+'" > ' + Math.round(d) +' km </div>');
             
           }else{
 
@@ -183,8 +205,8 @@ script
               enemyOnCockpit = enemyDegree - coursesPlayerLeft;
               
               eMarginTop = 'margin-top: 85px;';
-              eMarginLeft = 'margin-left: '+ enemyOnCockpit*20 +'px;';
-              $('#enemy-position').append('<div id="enemy-' + keyVal + '-pos" class="enemy-cursor" style="'+ eMarginTop + eMarginLeft+'" >' + Math.round(d) +' km </div>');
+              eMarginLeft = 'margin-left: '+ enemyOnCockpit*18.5 +'px;';
+              $('#enemy-position').append('<div id="enemy-' + keyVal + '-pos" class="enemy-cursor '+ enemyHead +'" style="'+ eMarginTop + eMarginLeft+'" >' + Math.round(d) +' km </div>');
             } 
           }
           
@@ -195,11 +217,11 @@ script
           $('#enemy-'+keyVal).rotate(userList[keyVal]['degree']);
            
           var getEnemy = keyVal;
-          var misillePro = d/20;
+          var misillePro = d/10;
           $('#enemyStatus').prepend(
             '<div id="distance-enemy-' + keyVal + 
-            '" class="distance-enemy"><p>Enemy '+ getEnemy +' : ' + Math.round(d) +
-            ' km <br> ETA missile hit : ' + Math.round(misillePro) + ' seconds<br/> ' + 
+            '" class="distance-enemy"><p>Enemy '+ getEnemy +' (' + Math.round(d) +
+            ' km) <br> ETA missile hit : ' + Math.round(misillePro) + ' seconds<br/> ' + 
             ' </p></div>');
         };
       };
@@ -219,10 +241,12 @@ script
     });
 
     now.updateLaunch = function(status) {
+        $('#notification').empty();
         $('#notification').append('<div class="alert-message error">' + status + '</span>');
     };
     
     now.updateStatusMissile = function(status) {
+        $('#notification').empty();
         $('#notification').prepend('<div class="alert-message error">' + status + '</span>');
     };
     

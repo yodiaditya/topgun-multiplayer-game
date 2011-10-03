@@ -8,8 +8,6 @@ var nib = require('nib');
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var latLong = require('./public/javascripts/latlong');
-
 // Mongoose
 mongoose.connect('mongodb://localhost/topgun');
 
@@ -116,6 +114,7 @@ var minLat = 0,
 var counting;
 var distribute;
 var userList;
+var missileList;
 
 /**
  * Start scanning all users coordinate every 1 seconds 
@@ -128,7 +127,7 @@ function enterDistribute() {
     Users.find({ 'modified': { $gte: Date.now()-2000 },'is_play': 1 }, function(err, docs){
         userList = docs;
     });
-   
+  
     updateMissile();
 };
 
@@ -157,7 +156,7 @@ everyone.now.startGame = function() {
 
 function counter(userId){
     everyone.now.startUserGame(userId);
-    counting = setTimeout(function() { counter(userId) }, 500);
+    counting = setTimeout(function() { counter(userId) }, 1000);
 };
 
 /**
@@ -192,13 +191,13 @@ everyone.now.startUserGame = function(userId) {
                         'airbase': user.airbase,
                         'degree' : user.degree
                     };
-                    this.now.userPosition(player, userList);
+                    this.now.userPosition(player, userList, missileList);
                     /* console.log( 'After:' + updateData.latitude + ' ,' + updateData.longitude); */
                 }).bind(this, "tunnel"));
 
             }
         }).bind(this, "tunnel"));
-        
+       
     } 
 };
 
@@ -246,7 +245,7 @@ everyone.now.userSpeed = function(val) {
 };
 
 /**
- * Shot missile
+ * When user shot missile then execute!
  */
 everyone.now.launchMissile = function() {
     var points = {}, enemyOnTarget = {}, player;
@@ -257,8 +256,8 @@ everyone.now.launchMissile = function() {
        }
     }
     
-    coursesPlayerLeft = player.degree - 10;
-    coursesPlayerRight = player.degree + 10;
+    
+    var limitView = 10; // Limit tolerance of shots in degree 
    
     for(var key in userList) {
        if(userList[key].id != this.user.clientId) { 
@@ -268,40 +267,21 @@ everyone.now.launchMissile = function() {
                     userList[key].latitude, 
                     userList[key].longitude);
 
-            console.log('P: ' + player.degree + ' , E: '+ rangeShots);
+            console.log('P (' + player.id + ') ' + player.degree + ' , E: '+ rangeShots +' (' + userList[key].id + ')');
+
+            diffDegree = Math.min(Math.abs(rangeShots-player.degree),360-Math.abs(rangeShots-player.degree)); // calculate rangeShots with degree from user view on cockpit
+           
+            console.log('accuracy : ' + diffDegree);
             
-            if(rangeShots > 350 || rangeShots < 10){
-                if(coursesPlayerLeft < 0) {
-                    coursesPlayerLeft = coursesPlayerLeft + 360;
-                }
-
-                if(coursesPlayerRight > 360) {
-                    coursesPlayerRight = coursesPlayerRight - 360;
-                }
-
-                if(rangeShots < coursesPlayerRight) {
-                    if(player.degree > 355){
-                        balanceRight = 360-player.degree;
-                        balanceRight = balanceRight - rangeShots;
-                    }else{
-                        balanceRight = player.degree - rangeShots;
-                    }
-                    
-                    getDegree = Math.abs(balanceRight); 
-                    enemyOnTarget[key] = { id: userList[key].id, accuracy: getDegree };
-
-                }else if(rangeShots > coursesPlayerLeft){
-                    getDegree = Math.abs(rangeShots-player.degree);
-                    enemyOnTarget[key] = { id: userList[key].id, accuracy: getDegree };
-                } 
-            } else if(rangeShots > coursesPlayerLeft && rangeShots < coursesPlayerRight) {
-                getDegree = Math.abs(rangeShots-player.degree);
-                enemyOnTarget[key] = { id: userList[key].id, accuracy: getDegree };
+            if(diffDegree < limitView){
+                enemyOnTarget[key] = { id: userList[key].id, accuracy: diffDegree };
             }
        }
     }
   
     getTotalTarget = countInObject(enemyOnTarget);
+   
+    console.log('enemyOnTarget : ' + enemyOnTarget);
     
     if(getTotalTarget > 0) {
        var getNumber = {};
@@ -311,6 +291,8 @@ everyone.now.launchMissile = function() {
        }
      
        var getSelectedEnemy = countInObject(getNumber);
+       
+       console.log('Get Numher ' + getNumber);
        
        if(getSelectedEnemy > 0){
             var smallest = 10;
@@ -331,19 +313,24 @@ everyone.now.launchMissile = function() {
           
             var getEnemyNow = countInObject(selected);
             
+            console.log('get enemy now : ' + getTotalTarget);
+            console.log(selected);
+           
+            
             if(getEnemyNow > 0) {
-                
                 
                 for(var key in userList) {
                     getSelectId = parseInt(selected.id); 
                     getUserId = parseInt(userList[key].id);
+                   
+                    console.log('matching ' + getSelectId + ' with ' + getUserId);
                     
                     if(getSelectId == getUserId) {
                         
                         var d = distancePoints(player.latitude, player.longitude, userList[key].latitude, userList[key].longitude); 
                         var missileTime = Math.round(d/10);
                             
-                        new Missile({ 
+                        new Missile({
                             player_id: this.user.clientId , 
                             enemy_id: userList[key].id ,  
                             rlatitude: player.latitude , 
@@ -356,7 +343,7 @@ everyone.now.launchMissile = function() {
                         }).save(); 
                         
                         everyone.now.updateLaunchMissile(this.user.clientId, userList[key].id , d , missileTime);                        
-                        
+                        console.log('missile time :' + missileTime + ' on distance : ' + d); 
                     }
                 }
             }
@@ -365,6 +352,9 @@ everyone.now.launchMissile = function() {
     
 };
 
+/**
+ * Broadcast missile status to All Users
+ */
 everyone.now.updateLaunchMissile = function(player_id, enemy_id, d, missileTime) {
     if(this.user.clientId == player_id) {
         this.now.updateLaunch('<strong>Missile launch!</strong> ' + missileTime +' seconds ' + ' (' + d + ' km)');
@@ -375,12 +365,18 @@ everyone.now.updateLaunchMissile = function(player_id, enemy_id, d, missileTime)
     }
 }
 
+/**
+ * Updating List Missile that already launch and in progress 
+ * 
+ */
 function updateMissile() {
-
-    Missile.find({'is_progress': 1}, (function(tunnel, err, missiles) {
+    Missile.find({ 'is_progress': 1 }, (function(tunnel, err, missiles) {
         checkMissile = countInObject(missiles);
+        
         if(!err && checkMissile>0) {
-
+            
+            missileList = missiles;
+            
             missiles.forEach(function(m) {
                 
                 var nextPos = nextPoints(10, m.rlatitude, m.rlongitude, m.degree);
@@ -390,6 +386,10 @@ function updateMissile() {
                 var getDistance = distancePoints(lat1,lon1,m.platitude,m.plongitude);
                 var updateTime = Math.round(getDistance/10);
                 var remaining = m.time-updateTime;
+                
+                console.log('Distance : ' + getDistance + ' , Remaining: ' + updateTime)
+                
+                console.log('getId ' + m._id);
                 
                 if(remaining < 1) {
                     var updateData = {
@@ -410,12 +410,14 @@ function updateMissile() {
                             rocketEnemyDistance = distancePoints(m.platitude,m.plongitude, userList[key].latitude, userList[key].longitude);
                         }
                     }
+                   
+                    console.log('rocket + enemy distance ' + rocketEnemyDistance + 'km');
                     
                     Missile.update({ _id: m._id  }, updateData , function(err) {
                         if(rocketEnemyDistance < 3) {
-                            everyone.now.countMissile(3, m.player_id, m.enemy_id, rocketEnemyDistance, m.time);
-                        }else{
                             everyone.now.countMissile(2, m.player_id, m.enemy_id, rocketEnemyDistance, m.time);
+                        }else{
+                            everyone.now.countMissile(1, m.player_id, m.enemy_id, rocketEnemyDistance, m.time);
                         }
                     });
                 
@@ -431,16 +433,18 @@ function updateMissile() {
                     Missile.update({ _id: m._id  }, updateData , function(err) {
                         everyone.now.countMissile(0,m.player_id, m.enemy_id, getDistance, m.time);
                     });
-                
-                }   
-            });  
-        }   
-
+                }
+            });
+        }else if(!err && checkMissile == 0) {
+            missileList = '';
+        }
     }).bind(this,"tunnel"));
 }
 
+/**
+ * Sending missile notification to clientId
+ */
 everyone.now.countMissile = function(mode, player_id, enemy_id, distance, time) {
-   console.log(distance);
    
    if( mode == 0) {
         if(this.user.clientId == player_id) {
