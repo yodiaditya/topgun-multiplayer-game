@@ -261,78 +261,95 @@ everyone.now.launchMissile = function() {
             player = userList[key];
        }
     }
-    
-    var limitView = 10; // Limit tolerance of shots in degree 
    
-    for(var key in userList) {
-       if(userList[key].id != this.user.clientId) { 
-            var rangeShots =  calculateDegree(
-                    player.latitude,
-                    player.longitude,
-                    userList[key].latitude, 
-                    userList[key].longitude);
-
-            diffDegree = Math.min(Math.abs(rangeShots-player.degree),360-Math.abs(rangeShots-player.degree)); // calculate rangeShots with degree from user view on cockpit
-            if(diffDegree < limitView){
-                enemyOnTarget[key] = { id: userList[key].id, accuracy: diffDegree };
-            }
-       }
-    }
-  
-    getTotalTarget = countInObject(enemyOnTarget);
+    if(player.missile < 1) {
+        this.now.userCondition('missile', 0);
+        
+    } else {
+        
+        var limitView = 10; // Limit tolerance of shots in degree 
     
-    if(getTotalTarget > 0) {
-       var getNumber = new Array();
-       
-       for(var enVal in enemyOnTarget) {
-           getNumber[enVal] = enemyOnTarget[enVal].accuracy;
-       }
-       
-       if(getNumber.length > 0){
-            var smallest = 10;
+        for(var key in userList) {
+            if(userList[key].id != this.user.clientId) { 
+                var rangeShots =  calculateDegree(
+                        player.latitude,
+                        player.longitude,
+                        userList[key].latitude, 
+                        userList[key].longitude);
+
+                diffDegree = Math.min(Math.abs(rangeShots-player.degree),360-Math.abs(rangeShots-player.degree)); // calculate rangeShots with degree from user view on cockpit
+                if(diffDegree < limitView){
+                    enemyOnTarget[key] = { id: userList[key].id, accuracy: diffDegree };
+                }
+            }
+        }
+    
+        getTotalTarget = countInObject(enemyOnTarget);
+        
+        if(getTotalTarget > 0) {
+            var getNumber = new Array();
             
-            for (x=0;x<getNumber.length;x++){
-                if(smallest>getNumber[x]) {
-                    smallest = getNumber[x];    
-                }
-            }
-           
             for(var enVal in enemyOnTarget) {
-                if(enemyOnTarget[enVal].accuracy == smallest) {
-                   selected[0] = enemyOnTarget[enVal].id; 
-                }
+                getNumber[enVal] = enemyOnTarget[enVal].accuracy;
             }
-          
-            if(selected.length > 0) {
+        
+            if(getNumber.length > 0){
+                var smallest = 10;
                 
-                for(var key in userList) {
-                    console.log(selected);
-                    getSelectId = parseInt(selected[0]); 
-                    getUserId = parseInt(userList[key].id);
+                for (x=0;x<getNumber.length;x++){
+                    if(smallest>getNumber[x]) {
+                        smallest = getNumber[x];    
+                    }
+                }
+            
+                for(var enVal in enemyOnTarget) {
+                    if(enemyOnTarget[enVal].accuracy == smallest) {
+                    selected[0] = enemyOnTarget[enVal].id; 
+                    }
+                }
+            
+                if(selected.length > 0) {
                     
-                    if(getSelectId == getUserId) {
+                    for(var key in userList) {
+                        getSelectId = parseInt(selected[0]); 
+                        getUserId = parseInt(userList[key].id);
                         
-                        var d = distancePoints(player.latitude, player.longitude, userList[key].latitude, userList[key].longitude); 
-                        var missileTime = Math.round(d/10);
-                            
-                        new Missile({
-                            player_id: this.user.clientId , 
-                            enemy_id: userList[key].id ,  
-                            rlatitude: player.latitude , 
-                            rlongitude: player.longitude ,
-                            platitude: userList[key].latitude ,
-                            plongitude: userList[key].longitude,
-                            degree: player.degree,
-                            distance: d,
-                            time: missileTime
-                        }).save(); 
+                        if(getSelectId == getUserId) {
+                            var d = distancePoints(player.latitude, player.longitude, userList[key].latitude, userList[key].longitude); 
+                            var missileTime = Math.round(d/10);
+                                
+                            new Missile({
+                                player_id: this.user.clientId , 
+                                enemy_id: userList[key].id ,  
+                                rlatitude: player.latitude , 
+                                rlongitude: player.longitude ,
+                                platitude: userList[key].latitude ,
+                                plongitude: userList[key].longitude,
+                                degree: player.degree,
+                                distance: d,
+                                time: missileTime
+                            }).save(); 
                         
-                        everyone.now.updateLaunchMissile(this.user.clientId, userList[key].id , d , missileTime);                        
-                        console.log('missile time :' + missileTime + ' on distance : ' + d); 
+                            // Decrease user missile number
+                            Users.findOne({ 'id': this.user.clientId }, (function(tunnel, err, user) {
+                                var remainingMissile = parseInt(user.missile)-1;
+                                
+                                var updateMissile = {
+                                    missile: remainingMissile
+                                }
+                                
+                                Users.update({ id: this.user.clientId }, updateMissile , (function(tunnel, err) {
+                                    everyone.now.updateLaunchMissile(this.user.clientId, userList[key].id , d , missileTime);                        
+                                }).bind(this, "tunnel"));
+                                
+                            }).bind(this, "tunnel"));
+                                
+                        }
                     }
                 }
             }
-       }
+        }
+        
     }
     
 };
@@ -390,27 +407,23 @@ function updateMissile() {
                         
                         if(getEnemyId == getUserId) {
                             enemyId = getEnemyId;
+                            enemyHealth = userList[key].health;
                             rocketEnemyDistance = distancePoints(m.platitude,m.plongitude, userList[key].latitude, userList[key].longitude);
                         }
                     }
                     
                     Missile.update({ _id: m._id  }, updateData , function(err) {
                         if(rocketEnemyDistance < 3) { // Missile hit enemyOnTarget
-                            
-                            for(var keyEnemy in userList) {
-                                if(getEnemyId == getUserId) {
-                                    enemyId = getEnemyId;
-                                    enemyHealth = userList[keyEnemy].health;
-                                }
-                            }
-                            
-                            var updateData = {
+                           
+                            console.log('health : ' + enemyHealth);
+
+                            var updateEnemyData = {
                                 health: enemyHealth-25,
                             };
                             
-                            Users.update({ id: enemyId }, updateData , function(err) {
+                            Users.update({ id: enemyId }, updateEnemyData, (function(tunnel,err) {
                                 everyone.now.countMissile(2, m.player_id, m.enemy_id, rocketEnemyDistance, m.time);
-                            });
+                            }).bind(this,"tunnel"));
                             
                         }else{ // Missile missed
                             everyone.now.countMissile(1, m.player_id, m.enemy_id, rocketEnemyDistance, m.time);

@@ -252,6 +252,13 @@ script
       $('#distance').empty().append('<div></div>').html("Latitude &amp; longitude<br/>" + player);
     };
     
+    now.userCondition = function(condition, value) {
+      if(condition == 'missile') {
+        $('#notification').empty();
+        $('#notification').append('<div class="alert-message error">Running out missile!</span>');
+      }
+    };
+    
   });
 
 
