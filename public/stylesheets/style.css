@@ -22,6 +22,7 @@ body{color:#cacaca;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-
 .mapenemy{position:absolute;background:url("../images/enemy.png") no-repeat;width:10px;height:10px}
 #mapbox .missile-map{position:absolute;background:url("../images/rocket.png") no-repeat;width:5px;height:5px}
 #enemy-position{position:absolute;height:10px;width:600px}
+.enemy-health{height:2px;background-color:#ef0;border:1px solid #000}
 .enemy-on-back{background:url("../images/plane-back.png") no-repeat}
 .enemy-on-front{background:url("../images/plane-front.png") no-repeat}
 .enemy-cursor{z-index:9999;position:absolute;width:100px;height:30px;color:#000;font-weight:bold;font-size:10px;padding:10px 0 0 10px}

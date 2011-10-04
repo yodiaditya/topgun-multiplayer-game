@@ -38,6 +38,11 @@ script
       $('#begining-game').remove(); 
       now.startGame();
     });
+    
+    $(document).bind('keydown', 'space',function (e){
+      now.launchMissile();
+      e.preventDefault();
+    });
   
     $(document).bind('keydown', 'left',function (e){
       now.userMovement(-5);
@@ -190,13 +195,13 @@ script
             }else if(enemyDegree > coursesPlayerLeft){
               enemyOnCockpit = enemyDegree - coursesPlayerLeft;
             } 
-              
-            //console.log(' Limit : Left:' + coursesPlayerLeft + ' , Right: ' + coursesPlayerRight + ', cockpit ' + enemyOnCockpit);
  
             eMarginTop = 'margin-top:85px;';
             eMarginLeft = 'margin-left: '+ enemyOnCockpit*18.5 +'px;';
             
-            $('#enemy-position').append('<div id="enemy-' + keyVal + '-pos" class="enemy-cursor '+ enemyHead +'" style="'+ eMarginTop + eMarginLeft+'" > ' + Math.round(d) +' km </div>');
+            $('#enemy-position').append('<div id="enemy-' + keyVal + '-pos" class="enemy-cursor '+ 
+                enemyHead +'" style="'+ eMarginTop + eMarginLeft + '" > ' + Math.round(d) +' km <br/> ' + 
+                '<div class="enemy-health" style="width:' +  userList[keyVal].health/2 + 'px;"></div></div>');
             
           }else{
 
@@ -232,12 +237,6 @@ script
       $('#statusUser').empty().append('<div></div>').html("<strong> Latitude, Longitude</strong> <br>" + player['latitude'] + ',' + player['longitude']);
 
     };
-
-    $('a.launchmisille').click(function() { 
-      now.launchMissile();
-
-      return false;
-    });
 
     now.updateLaunch = function(status) {
         $('#notification').empty();
@@ -290,9 +289,6 @@ script
 
       #enemyStatus
         <strong>Enemy List</strong><br/>
-
-      #missileOptions
-        a(href="#",class="launchmisille") Shots!
 
       #notification
         

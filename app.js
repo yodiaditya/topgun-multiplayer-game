@@ -18,6 +18,12 @@ var UserSchema = new Schema({
   , longitude : Number
   , speed     : { type: Number, default: 1 }
   , degree    : { type: Number, default: 0 }
+  , health    : { type: Number, default: 100 }
+  , win       : { type: Number, default: 0 }
+  , lose      : { type: Number, default: 0 }
+  , email     : String
+  , missile   : { type: Number, default: 10 }
+  , ammo      : { type: Number, default: 200 }
   , created   :  { type: Date, default: Date.now }
   , modified  :  { type: Date, default: Date.now }
   , is_play   :  { type: Number, default: 1 }
@@ -248,14 +254,13 @@ everyone.now.userSpeed = function(val) {
  * When user shot missile then execute!
  */
 everyone.now.launchMissile = function() {
-    var points = {}, enemyOnTarget = {}, player;
+    var points = {}, enemyOnTarget = {}, player, selected = new Array();
     
     for(var key in userList) {
        if(userList[key].id == this.user.clientId) {
             player = userList[key];
        }
     }
-    
     
     var limitView = 10; // Limit tolerance of shots in degree 
    
@@ -267,12 +272,7 @@ everyone.now.launchMissile = function() {
                     userList[key].latitude, 
                     userList[key].longitude);
 
-            console.log('P (' + player.id + ') ' + player.degree + ' , E: '+ rangeShots +' (' + userList[key].id + ')');
-
             diffDegree = Math.min(Math.abs(rangeShots-player.degree),360-Math.abs(rangeShots-player.degree)); // calculate rangeShots with degree from user view on cockpit
-           
-            console.log('accuracy : ' + diffDegree);
-            
             if(diffDegree < limitView){
                 enemyOnTarget[key] = { id: userList[key].id, accuracy: diffDegree };
             }
@@ -280,50 +280,35 @@ everyone.now.launchMissile = function() {
     }
   
     getTotalTarget = countInObject(enemyOnTarget);
-   
-    console.log('enemyOnTarget : ' + enemyOnTarget);
     
     if(getTotalTarget > 0) {
-       var getNumber = {};
+       var getNumber = new Array();
        
        for(var enVal in enemyOnTarget) {
            getNumber[enVal] = enemyOnTarget[enVal].accuracy;
        }
-     
-       var getSelectedEnemy = countInObject(getNumber);
        
-       console.log('Get Numher ' + getNumber);
-       
-       if(getSelectedEnemy > 0){
+       if(getNumber.length > 0){
             var smallest = 10;
             
-            for (x=0;x<getSelectedEnemy;x++){
+            for (x=0;x<getNumber.length;x++){
                 if(smallest>getNumber[x]) {
                     smallest = getNumber[x];    
                 }
             }
            
-            var selected = {};
-            
             for(var enVal in enemyOnTarget) {
                 if(enemyOnTarget[enVal].accuracy == smallest) {
-                   selected = enemyOnTarget[enVal]; 
+                   selected[0] = enemyOnTarget[enVal].id; 
                 }
             }
           
-            var getEnemyNow = countInObject(selected);
-            
-            console.log('get enemy now : ' + getTotalTarget);
-            console.log(selected);
-           
-            
-            if(getEnemyNow > 0) {
+            if(selected.length > 0) {
                 
                 for(var key in userList) {
-                    getSelectId = parseInt(selected.id); 
+                    console.log(selected);
+                    getSelectId = parseInt(selected[0]); 
                     getUserId = parseInt(userList[key].id);
-                   
-                    console.log('matching ' + getSelectId + ' with ' + getUserId);
                     
                     if(getSelectId == getUserId) {
                         
@@ -386,10 +371,7 @@ function updateMissile() {
                 var getDistance = distancePoints(lat1,lon1,m.platitude,m.plongitude);
                 var updateTime = Math.round(getDistance/10);
                 var remaining = m.time-updateTime;
-                
-                console.log('Distance : ' + getDistance + ' , Remaining: ' + updateTime)
-                
-                console.log('getId ' + m._id);
+                var enemyId, enemyHealth;
                 
                 if(remaining < 1) {
                     var updateData = {
@@ -407,16 +389,30 @@ function updateMissile() {
                         getUserId = parseInt(userList[key].id);
                         
                         if(getEnemyId == getUserId) {
+                            enemyId = getEnemyId;
                             rocketEnemyDistance = distancePoints(m.platitude,m.plongitude, userList[key].latitude, userList[key].longitude);
                         }
                     }
-                   
-                    console.log('rocket + enemy distance ' + rocketEnemyDistance + 'km');
                     
                     Missile.update({ _id: m._id  }, updateData , function(err) {
-                        if(rocketEnemyDistance < 3) {
-                            everyone.now.countMissile(2, m.player_id, m.enemy_id, rocketEnemyDistance, m.time);
-                        }else{
+                        if(rocketEnemyDistance < 3) { // Missile hit enemyOnTarget
+                            
+                            for(var keyEnemy in userList) {
+                                if(getEnemyId == getUserId) {
+                                    enemyId = getEnemyId;
+                                    enemyHealth = userList[keyEnemy].health;
+                                }
+                            }
+                            
+                            var updateData = {
+                                health: enemyHealth-25,
+                            };
+                            
+                            Users.update({ id: enemyId }, updateData , function(err) {
+                                everyone.now.countMissile(2, m.player_id, m.enemy_id, rocketEnemyDistance, m.time);
+                            });
+                            
+                        }else{ // Missile missed
                             everyone.now.countMissile(1, m.player_id, m.enemy_id, rocketEnemyDistance, m.time);
                         }
                     });
@@ -454,15 +450,15 @@ everyone.now.countMissile = function(mode, player_id, enemy_id, distance, time) 
         }
    }else if(mode == 1){
     if(this.user.clientId == player_id) {
-            this.now.updateStatusMissile('Missile missed ' + distance + ' from enemy'); 
+            this.now.updateStatusMissile('Missile missed ' + distance + ' km from enemy'); 
     }else if(this.user.clientId == enemy_id) {
-            this.now.updateStatusMissile('Succesfully dogde missile near ' + distance + ' km'); 
+            this.now.updateStatusMissile('Dogde missile near ' + distance + ' km'); 
     }
    }else{
     if(this.user.clientId == player_id) {
-            this.now.updateStatusMissile('Success hit enemy!'); 
+            this.now.updateStatusMissile('<strong>Success</strong> hit enemy!'); 
     }else if(this.user.clientId == enemy_id) {
-            this.now.updateStatusMissile('Enemy missile hit you!'); 
+            this.now.updateStatusMissile('<strong>Boom!</strong> enemy missile hit you!'); 
     }
    
    }
