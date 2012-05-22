@@ -65,11 +65,11 @@ app.configure(function() {
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(stylus.middleware({
-      src: __dirname + '/public',
+      src: __dirname + '/assets',
       compile: compile
   }));
   app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
+  app.use(express.static(__dirname + '/assets'));
 });
 
 app.configure('development', function() {

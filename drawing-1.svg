@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="drawing-1.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4923">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop4925" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop4927" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       id="filter3829"
+       x="-0.089970861"
+       width="1.1799417"
+       y="-0.26616378"
+       height="1.5323276">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.6188414"
+         id="feGaussianBlur3831" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter4003"
+       x="-0.34258135"
+       width="1.6851627"
+       y="-1.0134698"
+       height="3.0269396">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="9.9717422"
+         id="feGaussianBlur4005" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter4007"
+       x="-0.35988344"
+       width="1.7197669"
+       y="-1.0646551"
+       height="3.1293103">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="10.475366"
+         id="feGaussianBlur4009" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4923"
+       id="linearGradient4929"
+       x1="289.40878"
+       y1="-497.28406"
+       x2="289.40878"
+       y2="-584.07013"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4923"
+       id="linearGradient4935"
+       gradientUnits="userSpaceOnUse"
+       x1="289.40878"
+       y1="-497.28406"
+       x2="289.40878"
+       y2="-584.07013" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4923"
+       id="linearGradient4951"
+       gradientUnits="userSpaceOnUse"
+       x1="289.40878"
+       y1="-497.28406"
+       x2="289.40878"
+       y2="-584.07013" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4923"
+       id="linearGradient5060"
+       gradientUnits="userSpaceOnUse"
+       x1="289.40878"
+       y1="-497.28406"
+       x2="289.40878"
+       y2="-584.07013"
+       gradientTransform="matrix(1.2764575,0,0,0.99473691,2.6718183,-157.03984)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="255.71394"
+     inkscape:cy="565.25293"
+     inkscape:document-units="px"
+     inkscape:current-layer="g2999"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="717"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2999"
+       inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane.png"
+       inkscape:export-xdpi="67.948006"
+       inkscape:export-ydpi="67.948006"
+       transform="matrix(0.72595843,0,0,0.72595843,74.186962,89.084017)">
+      <g
+         id="g3007"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane.png"
+         inkscape:export-xdpi="96.419998"
+         inkscape:export-ydpi="96.419998">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="rect2997"
+           width="38.57143"
+           height="38.569702"
+           x="270.71426"
+           y="322.99594"
+           ry="2.0200226" />
+        <path
+           style="fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 289.64286,326.29075 -2.01855,7.53331 0,6.39526 -14.1693,14.1693 14.04499,0 -5.59392,5.59393 6.0943,-1.63297 2.35676,0 0,-32.05883 z"
+           id="path2989"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path2991"
+           d="m 290.63236,326.16411 2.02804,7.56873 0,6.42535 14.23594,14.23593 -14.11104,0 5.62024,5.62023 -6.12298,-1.64064 -2.36783,0 0,-32.2096 z"
+           style="fill:#000000;stroke:#000000;stroke-width:1.00470293px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+      <g
+         id="g3786"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90">
+        <rect
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/enemy.png"
+           ry="0"
+           y="309.5311"
+           x="162.48297"
+           height="13.774894"
+           width="13.774894"
+           id="rect3782"
+           style="fill:#ffffff;fill-opacity:1;stroke:none" />
+        <path
+           inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/enemy.png"
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           id="path3012"
+           d="m 169.92452,309.71561 -6.42794,13.1664 12.35532,0 z"
+           style="fill:#000000;stroke:none" />
+        <path
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           id="path3784"
+           d="m 163.25166,322.9678 6.7243,-3.3887 6.06197,3.38641 z"
+           style="fill:#ffffff;stroke:none" />
+      </g>
+      <g
+         id="g3861"
+         transform="matrix(1.7967072,0,0,0.55654446,677.22367,108.59025)"
+         style="filter:url(#filter4003)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/stitched-panorama-reel.jpg.png"
+         inkscape:export-xdpi="110.39"
+         inkscape:export-ydpi="110.39">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path3863"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-102.19175,-413.95238)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-94.320382,-418.38002)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path3865"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path3867"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-79.561568,-411.00061)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-68.246477,-417.3961)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path3869"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path3871"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-81.037449,-420.34786)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-61.85099,-414.44433)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path3873"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+      </g>
+      <rect
+         style="fill:#cacaff;fill-opacity:1;stroke:none"
+         id="rect3791"
+         width="2275.6123"
+         height="206.6234"
+         x="-87.398483"
+         y="64.265549"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/stitched-panorama-reel.jpg.png"
+         inkscape:export-xdpi="110.39"
+         inkscape:export-ydpi="110.39" />
+      <g
+         style="filter:url(#filter4007)"
+         id="g4011"
+         transform="matrix(3.1984984,0,0,0.34464049,1025.9297,91.338255)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/stitched-panorama-reel.jpg.png"
+         inkscape:export-xdpi="110.39"
+         inkscape:export-ydpi="110.39">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path4013"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-102.19175,-413.95238)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-94.320382,-418.38002)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path4015"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path4017"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-79.561568,-411.00061)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-68.246477,-417.3961)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path4019"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path4021"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-81.037449,-420.34786)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-61.85099,-414.44433)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path4023"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+      </g>
+      <g
+         transform="matrix(6.9330366,0,0,0.74703966,179.15451,-37.904555)"
+         id="g4025"
+         style="filter:url(#filter4007)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/stitched-panorama-reel.jpg.png"
+         inkscape:export-xdpi="110.39"
+         inkscape:export-ydpi="110.39">
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-102.19175,-413.95238)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path4027"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path4029"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-94.320382,-418.38002)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-79.561568,-411.00061)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path4031"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path4033"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-68.246477,-417.3961)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-81.037449,-420.34786)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path4035"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path4037"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-61.85099,-414.44433)" />
+      </g>
+      <g
+         style="filter:url(#filter3829)"
+         id="g4043"
+         transform="matrix(2.5328216,0,0,1.4950582,1893.3863,-120.86662)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/stitched-panorama-reel.jpg.png"
+         inkscape:export-xdpi="110.39"
+         inkscape:export-ydpi="110.39">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path4045"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-102.19175,-413.95238)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-94.320382,-418.38002)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path4047"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path4049"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-79.561568,-411.00061)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-68.246477,-417.3961)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path4051"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path4053"
+           sodipodi:cx="77.85714"
+           sodipodi:cy="263.07648"
+           sodipodi:rx="10.714286"
+           sodipodi:ry="2.8571429"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           transform="matrix(1.3774893,0,0,2.4966994,-81.037449,-420.34786)" />
+        <path
+           transform="matrix(1.3774893,0,0,2.4966994,-61.85099,-414.44433)"
+           d="m 88.571425,263.07648 c 0,1.57795 -4.796949,2.85714 -10.714285,2.85714 -5.917337,0 -10.714286,-1.27919 -10.714286,-2.85714 0,-1.57796 4.796949,-2.85715 10.714286,-2.85715 5.917336,0 10.714285,1.27919 10.714285,2.85715 z"
+           sodipodi:ry="2.8571429"
+           sodipodi:rx="10.714286"
+           sodipodi:cy="263.07648"
+           sodipodi:cx="77.85714"
+           id="path4055"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:type="arc" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect4532"
+         width="413.2468"
+         height="413.2468"
+         x="-1549.325"
+         y="-802.29706"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="427.42319"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4538"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4540"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="442.18201"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="457.92474"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4542"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4544"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="476.61923"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="493.14908"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4546"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4559"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="510.07254"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="524.83136"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4561"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4563"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="540.5741"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="559.26862"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4565"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#4d4d4d;fill-opacity:1;stroke:none"
+         id="rect4567"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="572.84668"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="588.29425"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4569"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4571"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="607.48071"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="623.22345"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4573"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4575"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="641.91797"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="658.44781"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4577"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4579"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="678.32306"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="693.08185"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4581"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4583"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="708.82458"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="727.5191"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4585"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4587"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="744.04895"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4589"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="399.87338"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4591"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="412.66437"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="758.02063"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4593"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="scale(1,-1)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4595"
+         width="413.2468"
+         height="1.9678485"
+         x="-1549.325"
+         y="776.71515"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="793.245"
+         x="-1549.325"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4597"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1146.9012"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4599"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4601"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1158.7083"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1171.4993"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4603"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4605"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1183.3063"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4607"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1196.0973"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1207.9043"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4609"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4611"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1220.6953"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1232.5023"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4613"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1244.3094"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4615"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4617"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1256.1165"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1268.9075"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4619"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4621"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1280.7145"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4623"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1293.5055"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1305.3125"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4625"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4627"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1318.1035"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1329.9105"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4629"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1341.7177"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4631"
+         style="fill:#4d4d4d;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect4633"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1353.5247"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1366.3157"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4635"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4637"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1378.1227"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4639"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1389.9298"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1401.7368"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4641"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4643"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1414.5278"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1426.3348"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4645"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1438.142"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4647"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4649"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1449.949"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1462.74"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4651"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4653"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1474.547"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4655"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1487.338"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1499.145"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4657"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4659"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1511.936"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1523.743"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4661"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-1534.5662"
+         x="-801.31317"
+         height="1.9678485"
+         width="413.2468"
+         id="rect4663"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         transform="matrix(0,1,1,0,0,0)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         transform="matrix(0,1,1,0,0,0)"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         id="rect4665"
+         width="413.2468"
+         height="1.9678485"
+         x="-801.31317"
+         y="-1546.3732"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/radar.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         style="fill:#b2d7fe;fill-opacity:1;stroke:none"
+         id="rect4917"
+         width="954.50916"
+         height="371.92212"
+         x="-67.486816"
+         y="-1017.7563"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/bg.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         y="-735.87848"
+         x="-67.486816"
+         height="90.044281"
+         width="954.50916"
+         id="rect4921"
+         style="fill:url(#linearGradient5060);fill-opacity:1;stroke:none"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/bg.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <g
+         id="g3944">
+        <g
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-back.png"
+           id="g3927">
+          <path
+             style="fill:#bcbcbc;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+             d="m 418.58196,517.99148 19.69798,-3.03045 4.29315,-2.39912 9.72271,0 4.16688,2.77792 19.1929,2.77792 0.25254,1.13642 -20.96067,1.13643 -16.16244,0.12627 -20.07678,-1.13643 z"
+             id="path3897"
+             inkscape:connector-curvature="0"
+             transform="matrix(1.3774893,0,0,1.3774893,-102.19175,-122.71228)" />
+          <path
+             transform="matrix(0.96859855,0,0,0.96859855,69.562819,89.770022)"
+             d="m 455,519.50507 a 3.3928571,3.3928571 0 1 1 -6.78571,0 3.3928571,3.3928571 0 1 1 6.78571,0 z"
+             sodipodi:ry="3.3928571"
+             sodipodi:rx="3.3928571"
+             sodipodi:cy="519.50507"
+             sodipodi:cx="451.60715"
+             id="path3115"
+             style="fill:#dde018;fill-opacity:1;stroke:#7d7d7d;stroke-width:2.29817533;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             sodipodi:type="arc" />
+          <path
+             style="fill:#bcbcbc;fill-opacity:1;stroke:none"
+             d="m 504.71037,587.51069 -2.82832,-9.21851 5.91375,9.04458 z"
+             id="path3899"
+             inkscape:connector-curvature="0" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path3901"
+             d="m 523.56332,587.51069 2.49559,-9.21851 -5.21804,9.04458 z"
+             style="fill:#bcbcbc;fill-opacity:1;stroke:none" />
+          <path
+             sodipodi:type="arc"
+             style="fill:#bcbcbc;fill-opacity:1;stroke:none"
+             id="path3903"
+             sodipodi:cx="448.634"
+             sodipodi:cy="513.57208"
+             sodipodi:rx="2.3991122"
+             sodipodi:ry="2.3991122"
+             d="m 451.03311,513.57208 a 2.3991122,2.3991122 0 1 1 -4.79822,0 2.3991122,2.3991122 0 1 1 4.79822,0 z"
+             transform="matrix(1.3774893,0,0,1.3774893,-104.62683,-123.75589)" />
+          <path
+             style="fill:#666666;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 418.75,518.88004 c 1.16072,0 19.55357,0.44643 19.55357,0.44643 l 0.0893,1.07142 z"
+             id="path3905"
+             inkscape:connector-curvature="0"
+             transform="matrix(1.3774893,0,0,1.3774893,-102.19175,-122.71228)" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path3907"
+             d="m 552.11568,592.01091 c -1.64248,0 -27.66938,0.63173 -27.66938,0.63173 l -0.12637,1.51612 z"
+             style="fill:#666666;stroke:none" />
+          <path
+             style="fill:#898080;fill-opacity:1;stroke:none"
+             d="m 445.98215,519.40459 1.78571,0.0112 0.17857,1.25 -2.14286,0 z"
+             id="path3909"
+             inkscape:connector-curvature="0"
+             transform="matrix(1.3774893,0,0,1.3774893,-102.19175,-122.71228)"
+             sodipodi:nodetypes="ccccc" />
+          <path
+             style="fill:#898080;fill-opacity:1;stroke:none"
+             d="m 505.12209,586.61296 -1.87916,-5.34202 2.80001,3.80615 z"
+             id="path3911"
+             inkscape:connector-curvature="0" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path3913"
+             d="m 523.06287,586.48445 1.76171,-5.00815 -2.62501,3.56825 z"
+             style="fill:#898080;fill-opacity:1;stroke:none" />
+          <path
+             sodipodi:type="arc"
+             style="fill:#dde018;fill-opacity:1;stroke:#7d7d7d;stroke-width:2.29817533;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             id="path3917"
+             sodipodi:cx="451.60715"
+             sodipodi:cy="519.50507"
+             sodipodi:rx="3.3928571"
+             sodipodi:ry="3.3928571"
+             d="m 455,519.50507 a 3.3928571,3.3928571 0 1 1 -6.78571,0 3.3928571,3.3928571 0 1 1 6.78571,0 z"
+             transform="matrix(0.96859855,0,0,0.96859855,81.984821,89.770022)" />
+          <path
+             style="fill:#898080;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+             d="m 440.0477,515.71864 -4.54568,2.27284 2.77792,0.25254 z"
+             id="path3919"
+             inkscape:connector-curvature="0"
+             transform="matrix(1.3774893,0,0,1.3774893,-102.19175,-122.71228)" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path3921"
+             d="m 522.58022,587.78126 5.91377,2.95688 -3.61398,0.32854 z"
+             style="fill:#898080;fill-opacity:1;stroke:none" />
+          <path
+             style="fill:#898080;fill-opacity:1;stroke:none"
+             d="m 507.20834,583.27735 c 2.88748,-1.29907 5.784,2.07009 3.80687,3.14708 -0.22057,-2.41937 -1.43928,-2.22663 -3.70934,-2.55795 z"
+             id="path3923"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="cccc" />
+          <path
+             sodipodi:nodetypes="cccc"
+             inkscape:connector-curvature="0"
+             id="path3925"
+             d="m 519.5996,583.52333 c -3.01293,-1.29907 -6.03528,2.07009 -3.97226,3.14708 0.23015,-2.41937 1.50181,-2.22663 3.87049,-2.55795 z"
+             style="fill:#898080;fill-opacity:1;stroke:none" />
+        </g>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path3966"
+         d="m 291.42154,590.81544 27.13376,-4.17441 5.91377,-3.30476 13.39292,0 5.73984,3.82655 26.43801,3.82656 0.34787,1.5654 -28.8731,1.56542 -22.26358,0.17394 -27.65555,-1.56542 z"
+         style="fill:#bcbcbc;fill-opacity:1;stroke:none"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3970"
+         d="m 321.73149,587.51069 -2.82832,-9.21851 5.91375,9.04458 z"
+         style="fill:#bcbcbc;fill-opacity:1;stroke:none"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         style="fill:#bcbcbc;fill-opacity:1;stroke:none"
+         d="m 340.58444,587.51069 2.49559,-9.21851 -5.21804,9.04458 z"
+         id="path3972"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         transform="matrix(1.3774893,0,0,1.3774893,-287.08391,-123.40802)"
+         d="m 451.03311,513.57208 a 2.3991122,2.3991122 0 1 1 -4.79822,0 2.3991122,2.3991122 0 1 1 4.79822,0 z"
+         sodipodi:ry="2.3991122"
+         sodipodi:rx="2.3991122"
+         sodipodi:cy="513.57208"
+         sodipodi:cx="448.634"
+         id="path3974"
+         style="fill:#bcbcbc;fill-opacity:1;stroke:none"
+         sodipodi:type="arc"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3976"
+         d="m 291.96175,591.67668 c 1.59427,-0.12121 26.90393,-1.42899 26.90393,-1.42899 l 0.23455,1.4623 z"
+         style="fill:#666666;stroke:none"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         style="fill:#666666;stroke:none"
+         d="m 368.14497,591.65855 c -1.55284,-0.11806 -26.20482,-1.39186 -26.20482,-1.39186 l -0.22846,1.4243 z"
+         id="path4034"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         d="m 318.06548,588.96467 4.18166,-0.24598 1.47588,5.65754 -5.78054,-0.73795 z"
+         id="path4036"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4038"
+         d="m 343.03508,588.5957 -4.09268,-0.24598 -1.44448,5.65754 5.65754,-0.73795 z"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         d="m 328.03472,584.11896 c 1.87921,3.56534 4.02133,2.46214 6.3486,0.17391 0.37719,3.20803 -3.61711,4.10282 -6.39208,2.43508 -0.75664,-1.28294 -0.0763,-2.21582 0.0435,-2.60899 z"
+         id="path4040"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4042"
+         d="m 328.03472,584.11896 c 1.87921,-3.70786 4.02133,-2.56056 6.3486,-0.18086 0.37719,-3.33627 -3.61711,-4.26683 -6.39208,-2.53242 -0.75664,1.33422 -0.0763,2.30439 0.0435,2.71328 z"
+         style="fill:#666666;fill-opacity:1;stroke:none"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#bcbcbc;fill-opacity:1;stroke:none"
+         id="path4044"
+         sodipodi:cx="314.72565"
+         sodipodi:cy="519.8855"
+         sodipodi:rx="2.9673231"
+         sodipodi:ry="2.9041886"
+         d="m 317.69297,519.8855 a 2.9673231,2.9041886 0 1 1 -5.93465,0 2.9673231,2.9041886 0 1 1 5.93465,0 z"
+         transform="matrix(2.1688129,0,0,1.3774893,-352.19825,-122.88621)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         id="path4046"
+         sodipodi:cx="314.28571"
+         sodipodi:cy="518.88007"
+         sodipodi:rx="0.89285713"
+         sodipodi:ry="0.98214287"
+         d="m 315.17856,518.88007 a 0.89285713,0.98214287 0 1 1 -1.78571,0 0.89285713,0.98214287 0 1 1 1.78571,0 z"
+         transform="matrix(2.1326366,0,0,1.7095457,-339.80617,-294.42269)"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/plane-front.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18670669000000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4078"
+         width="6.7007399"
+         height="6.7007399"
+         x="208.23027"
+         y="539.46844"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/rocket.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         style="fill:#ffe400;fill-opacity:1;stroke:none"
+         d="m 210.59087,544.1321 -2.00026,1.65238 2.08722,0.0435 z"
+         id="path4082"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/rocket.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4084"
+         d="m 212.60738,544.15415 1.94825,1.60941 -2.03295,0.0424 z"
+         style="fill:#ffe400;fill-opacity:1;stroke:none"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/rocket.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         style="fill:#ffff00;fill-opacity:1;stroke:none"
+         id="rect4080"
+         width="2.2258661"
+         height="6.2089949"
+         x="210.49452"
+         y="539.6181"
+         inkscape:export-filename="/home/ubuntu/htdocs/js/nodejs/topgun/public/images/rocket.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+    </g>
+  </g>
+</svg>

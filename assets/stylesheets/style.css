@@ -1,4 +1,4 @@
-@import "bootstrap.min.css";
+@import 'bootstrap.min.css';
 html{background-color:#000}
 body{color:#cacaca;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-weight:normal;line-height:18px;margin:0;background-color:#000}
 .container{margin-left:auto;margin-right:auto;width:940px;padding-top:10px}
@@ -32,3 +32,8 @@ body{color:#cacaca;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-
 #guide{margin-top:20px;padding:10px 10px 10px 10px;border:1px solid #dcdcdc;color:#969696}
 #enemyStatus{margin-top:20px}
 .distance-enemy{margin-top:10px;padding-top:5px;border-top:1px solid #464646}
+#login-wrap{display:none}
+#login{padding:20px 20px 20px 20px}
+#login.modal{width:330px;z-index:10002}
+#login-desc{color:#b6b6b6}
+.alert-login{color:#cc0003;font-weight:bold}

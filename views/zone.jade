@@ -1,5 +1,6 @@
 script(src='/javascripts/jQueryRotateCompressed.2.1.js')
-script(src='/javascripts/jquery.hotkeys.js')
+script(src='/javascripts/jquery.hotkeys.min.js')
+script(src='/javascripts/jquery-modal/jquery.modal.min.js')
     
 script
   
@@ -29,13 +30,14 @@ script
   }
 
   $(document).ready(function(){
-    
+
     now.core.on('disconnect', function() {
-      now.clientDisconnect();
+      /* Do something */
     });
 
-    now.ready(function(){
-      $('#begining-game').remove(); 
+    now.ready(function() {
+     $('#begining-game').remove();
+     // $('#login-email').trigger('click'); 
       now.startGame();
     });
     
@@ -65,7 +67,6 @@ script
       $('#cockpit-viewer').rotate({ animateTo:0 });
       e.preventDefault();
     });
-
 
     $(document).bind('keydown', 'up',function (e){
       now.userSpeed(1);
@@ -107,8 +108,6 @@ script
       $('#player-plane').rotate(player.degree);
 
       var countEnemy = 0;
-
-      console.log(missileList);
       
       // Missile on Radar
       for(var missVal in missileList) {
@@ -178,7 +177,7 @@ script
           }else{
             enemyHead = 'enemy-on-back';
           }
-
+          
           if(enemyDegree > 345 || enemyDegree < 15){
             if(coursesPlayerLeft < 0) {
               coursesPlayerLeft = coursesPlayerLeft + 360;
@@ -210,7 +209,11 @@ script
               
               eMarginTop = 'margin-top: 85px;';
               eMarginLeft = 'margin-left: '+ enemyOnCockpit*18.5 +'px;';
-              $('#enemy-position').append('<div id="enemy-' + keyVal + '-pos" class="enemy-cursor '+ enemyHead +'" style="'+ eMarginTop + eMarginLeft+'" >' + Math.round(d) +' km </div>');
+            
+              $('#enemy-position').append('<div id="enemy-' + keyVal + '-pos" class="enemy-cursor '+ 
+                enemyHead +'" style="'+ eMarginTop + eMarginLeft + '" > ' + Math.round(d) +' km <br/> ' + 
+                '<div class="enemy-health" style="width:' +  userList[keyVal].health/2 + 'px;"></div></div>');
+            
             } 
           }
           
@@ -220,12 +223,20 @@ script
           $('#mapbox').append( $('<div id="enemy-'+ keyVal+'" class="mapenemy" style="margin-left:'+ enemyX + 'px;margin-top:'+ enemyY +'px;"></div>'));
           $('#enemy-'+keyVal).rotate(userList[keyVal]['degree']);
            
+          diffRangeShots = Math.min(Math.abs(enemyDegree-player.degree),360-Math.abs(enemyDegree - player.degree));
+          if(diffRangeShots < 11) {
+            var rangeShot = '<span class="label warning">On shot-range!</span>'
+          }else{
+            var rangeShot = ''; 
+          }
+          
           var getEnemy = keyVal;
           var misillePro = d/10;
           $('#enemyStatus').prepend(
             '<div id="distance-enemy-' + keyVal + 
-            '" class="distance-enemy"><p>Enemy '+ getEnemy +' (' + Math.round(d) +
-            ' km) <br> ETA missile hit : ' + Math.round(misillePro) + ' seconds<br/> ' + 
+            '" class="distance-enemy"><p><strong>Enemy '+ getEnemy +' (' + Math.round(d) +
+            ' km)</strong> '+ rangeShot + '<br> LT/LNG : ' + userList[keyVal]['latitude'] + ',' + userList[keyVal]['longitude'] + 
+            '<br> ETA missile : ' + Math.round(misillePro) + ' s<br/> ' +
             ' </p></div>');
         };
       };
@@ -258,7 +269,28 @@ script
         $('#notification').append('<div class="alert-message error">Running out missile!</span>');
       }
     };
-    
+
+    $("#login").modal({
+        escapeClose: false,
+        clickClose: false,
+        showClose: false,
+    });
+  
+    $('#login-submit').click(function() {
+      //now.userLogin($('#loginUser #email-player').val());
+      return false;
+    });
+
+    now.userNotification = function(condition) {
+      if(condition.errors.email.type != null) {
+        $('#login-validation').empty().append('<div class="alert-login">' + 
+        '<span>' + condition.errors.email.type +'.</span></div>');
+      }      
+    }
+
+    now.userPlay = function() {
+      //$('#login-close').trigger('click');
+    }
   });
 
 
@@ -280,6 +312,26 @@ script
         .clearfix
 
     .span5.whiteplace
+      #login-wrap
+        a(href="#login-email") login
+
+      #login
+        form#loginUser(action='#')
+          .clearfix
+            .input-prepend
+              h2 Email address
+              input.xlarge(id="email-player", type="text",value="", size=22);
+              #login-validation
+                
+              p#login-desc <br>Your email address will be used as player name. 
+                <br>Use same email address for continue the game.
+              button#login-submit.btn.primary(type='submit') Play! 
+              .clearfix
+              
+              a(rel="modal:close", href="#", id="login-close") close 
+          
+      #notification
+        
       #player
         #begining-game
           h2 preparing data ....
@@ -295,12 +347,9 @@ script
         #statusUser 
 
       #enemyStatus
-        <strong>Enemy List</strong><br/>
 
-      #notification
-        
       #guide
         p
           | 1. Use Left - Right key to move.<br>
           | 2. Up - Down key to +/- speed (1-5 km).<br>
-          | 3. Missile works if you're behind the enemy.<br>
+          | 3. Space for launch missile (if you lock enemy).<br>

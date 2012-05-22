@@ -1,0 +1,13 @@
+!!! 5
+html
+  head
+    title=title 
+    script(type='text/javascript', src='http://localhost:3001/socket.io/socket.io.js')
+    script(type='text/javascript')
+            var socket = io.connect('http://localhost:3001');
+            socket.on('news', function (data) {
+              console.log(data);
+              socket.emit('my other event', { my: 'data' });
+            });
+          
+  body
