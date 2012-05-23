@@ -1,6 +1,5 @@
 script(src='/javascripts/jQueryRotateCompressed.2.1.js')
 script(src='/javascripts/jquery.hotkeys.min.js')
-script(src='/javascripts/jquery-modal/jquery.modal.min.js')
     
 script
   
@@ -275,18 +274,6 @@ script
         clickClose: false,
         showClose: false,
     });
-  
-    $('#login-submit').click(function() {
-      //now.userLogin($('#loginUser #email-player').val());
-      return false;
-    });
-
-    now.userNotification = function(condition) {
-      if(condition.errors.email.type != null) {
-        $('#login-validation').empty().append('<div class="alert-login">' + 
-        '<span>' + condition.errors.email.type +'.</span></div>');
-      }      
-    }
 
     now.userPlay = function() {
       //$('#login-close').trigger('click');
@@ -312,24 +299,6 @@ script
         .clearfix
 
     .span5.whiteplace
-      #login-wrap
-        a(href="#login-email") login
-
-      #login
-        form#loginUser(action='#')
-          .clearfix
-            .input-prepend
-              h2 Email address
-              input.xlarge(id="email-player", type="text",value="", size=22);
-              #login-validation
-                
-              p#login-desc <br>Your email address will be used as player name. 
-                <br>Use same email address for continue the game.
-              button#login-submit.btn.primary(type='submit') Play! 
-              .clearfix
-              
-              a(rel="modal:close", href="#", id="login-close") close 
-          
       #notification
         
       #player
@@ -353,3 +322,15 @@ script
           | 1. Use Left - Right key to move.<br>
           | 2. Up - Down key to +/- speed (1-5 km).<br>
           | 3. Space for launch missile (if you lock enemy).<br>
+
+
+#footer
+  .inner
+    .container
+        #page-footer
+            h6 About Me
+            a(href='http://sg.linkedin.com/in/yodiaditya') My Linkedin | 
+            a(href='http://twitter.com/yodiaditya') @yodiaditya
+        p Grab this website source code at 
+            a(href='https://github.com/yodiaditya/topgun') My Github
+
